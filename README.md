@@ -1,6 +1,6 @@
 # Admin (Developed)
 
-Universal spa admin crud panel
+Universal SPA admin crud panel
 
 ## Development server
 
