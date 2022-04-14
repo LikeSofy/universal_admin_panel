@@ -1,4 +1,4 @@
-# Admin (Developed)
+# Admin (being developed)
 
 Universal SPA admin crud panel
 
