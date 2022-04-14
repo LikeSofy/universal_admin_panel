@@ -1,0 +1,10 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div *ngFor="let question of questions.questions" class="form-row">
+      <app-dynamic-question [question]="question" [form]="form"></app-dynamic-question>
+    </div>
+
+    <button mat-raised-button color="primary" class="submit-button" type="submit" [disabled]="!form.valid">Save</button>
+  </form>
+</div>

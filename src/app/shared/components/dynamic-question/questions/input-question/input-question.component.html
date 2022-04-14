@@ -1,0 +1,8 @@
+<mat-form-field appearance="outline" [formGroup]="form">
+  <mat-label>{{field.name}}</mat-label>
+  <input matInput [id]="key" [formControlName]="key">
+  <mat-error *ngIf="form.controls[key].invalid && form.controls[key].touched">
+    <div>{{form.controls[key].errors?.['serverError']}}</div>
+  </mat-error>
+</mat-form-field>
+

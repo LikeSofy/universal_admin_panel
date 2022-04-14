@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitButtonClicked()">
+  <mat-card-content>
+    <div *ngFor="let fieldKey of findKeys()">
+      <app-dynamic-question [error]="errors?.[fieldKey]" [key]="fieldKey" [field]="form.fields[fieldKey]" [form]="formGroup"></app-dynamic-question>
+    </div>
+  </mat-card-content>
+  <button mat-raised-button color="primary" class="submit-button" type="submit">
+    {{buttonText}}
+  </button>
+</form>

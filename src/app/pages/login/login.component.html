@@ -1,0 +1,12 @@
+<div class="container mat-app-background">
+  <mat-card>
+    <mat-card-title>{{loginForm?.name}}</mat-card-title>
+    <mat-card-subtitle class="error">
+      <mat-error>{{commonError}}</mat-error>
+    </mat-card-subtitle>
+    <div class="form">
+      <app-dynamic-form *ngIf="loginForm" [errors]="errors" [form]="loginForm" (onSubmit)="onSubmit($event)"
+                        [buttonText]="loginForm.buttonText"></app-dynamic-form>
+    </div>
+  </mat-card>
+</div>

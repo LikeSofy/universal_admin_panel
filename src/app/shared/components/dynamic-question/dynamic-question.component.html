@@ -1,0 +1,25 @@
+<div class="form-floating" [formGroup]="form">
+  <div [ngSwitch]="field.type">
+
+    <app-input-question *ngSwitchCase="'text-input'" [field]="field" [form]="form" [key]="key" [error]="error"></app-input-question>
+
+    <app-password-input-question *ngSwitchCase="'password-input'" [field]="field" [key]="key"
+                                 [form]="form"></app-password-input-question>
+
+    <app-text-area-input-question *ngSwitchCase="'text-area-input'" [field]="field" [key]="key"
+                                  [form]="form"></app-text-area-input-question>
+
+    <app-select-question *ngSwitchCase="'select-input'" [field]="field" [key]="key"
+                         [form]="form"></app-select-question>
+
+    <app-multiple-select-question *ngSwitchCase="'multiple-select-input'"
+                                  [field]="field" [key]="key"
+                                  [form]="form"></app-multiple-select-question>
+
+    <app-file-input-question *ngSwitchCase="'file-input'" [field]="field" [key]="key"
+                             [form]="form"></app-file-input-question>
+
+    <app-sub-question *ngSwitchCase="'sub-form-input'" [field]="field" [key]="key"
+    [form]="form"></app-sub-question>
+  </div>
+</div>

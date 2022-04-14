@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-title class="header">{{form.name}}</mat-card-title>
+  <app-dynamic-form *ngIf="form" [id]="id" [form]="form" (onSubmit)="submitButtonClicked()" [buttonText]="form.buttonText"></app-dynamic-form>
+  <mat-card-footer>
+    <mat-progress-bar [value]="progress"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>

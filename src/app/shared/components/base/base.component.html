@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="header-container">
+    <mat-toolbar class="header mat-elevation-z3">
+      <button mat-icon-button>
+        <mat-icon (click)="openedNavigation = !openedNavigation">menu</mat-icon>
+      </button>
+      <span>Sofy admin</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon (click)="logout($event)">logout</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+  <div *ngIf="pages" class="content-container">
+    <mat-drawer-container class="content-container">
+      <mat-drawer [opened]="openedNavigation" class="sidenav mat-elevation-z5" mode="side">
+        <div class="side-container">
+            <mat-nav-list class="side-menu">
+              <div>
+                <a mat-list-item [routerLink]="[key]" *ngFor="let key of pagesKeys()">{{pages[key]}}</a>
+              </div>
+            </mat-nav-list>
+        </div>
+      </mat-drawer>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

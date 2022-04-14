@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline" [formGroup]="form">
+  <mat-label>{{field.name}}</mat-label>
+  <mat-select [id]="key" [formControlName]="key">
+    <mat-option [value]="'gg'">{{'gg'}}</mat-option>
+  </mat-select>
+  <mat-error>
+    <div [innerHtml]="'now empty'"></div>
+  </mat-error>
+</mat-form-field>

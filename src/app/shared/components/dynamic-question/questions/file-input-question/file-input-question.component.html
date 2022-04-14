@@ -1,0 +1,13 @@
+<div class="file-chooser" [formGroup]="form">
+  <input style="display: none" type="file" class="form-control" [id]="key" (change)="onFileChange($event)"
+         #hiddenfileinput>
+  <div>
+    <button type="button" mat-raised-button color="primary"
+            (click)="hiddenfileinput.click(); " type="button">Select
+    </button>
+    {{fileText(hiddenfileinput)}}
+  </div>
+  <mat-error class="error">
+    <div [innerHtml]="'now empty'"></div>
+  </mat-error>
+</div>

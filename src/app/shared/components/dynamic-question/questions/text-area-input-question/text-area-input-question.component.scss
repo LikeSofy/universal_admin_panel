@@ -1,0 +1,17 @@
+.editor{
+  padding-bottom: 1.34375em;
+  margin: .25em 0;
+  position: relative;
+
+  .error{
+    position: absolute;
+    font-size: 75%;
+    margin-top: .6666666667em;
+    margin-bottom: .6666666667em;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    padding: 0 1em;
+  }
+}

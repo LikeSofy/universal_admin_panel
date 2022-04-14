@@ -1,0 +1,8 @@
+<div class="editor" [formGroup]="form">
+  <div>
+    <angular-editor formControlName="{{key}}" [config]="editorConfig"></angular-editor>
+  </div>
+  <mat-error class="error">
+    <div [innerHtml]="'now empty'"></div>
+  </mat-error>
+</div>
